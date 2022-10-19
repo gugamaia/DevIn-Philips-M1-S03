@@ -1,2 +1,5 @@
-# DevIn-Philips-M1-S03
-DEV in Philips M1-S03
+# m1-semana03
+
+Códigos vistos em aula
+
+Do curso DEVinPhilips
