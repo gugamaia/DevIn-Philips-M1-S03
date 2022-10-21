@@ -1,26 +1,22 @@
-/*
+console.log('Exercício 02 - Semana 03 - Módulo 01')
 
-Em um arquivo **app.js** (incluído em **index.html**) faça o seguinte:
+const campoNome = document.getElementById('nome');
+const botao = document.getElementById('botao');
+const paragrafo = document.getElementById('paragrafo');
 
-No documento **js** faça uma **arrow function** para retornar uma mensagem (string) de **"Olá, Mundo!"**.
+const mensagemOla = (nome) => `Olá, ${nome}!`;
+/*equivalente
+    mensagemOla = () => {
+        return("Olá, " + nome + "!");
+    };
+    */
 
-Armazene esta **arrow function** em uma constante (**const**) de nome **mensagemOla**.
+// console.log(mensagemOla('Mariana'));
 
-Chame a função **mensagemOla** e exiba o retorno desta função no console.
+botao.addEventListener('click', () => {
+    const nome = campoNome.value;
+    const mensagem = mensagemOla(nome);
+    paragrafo.innerHTML = mensagem;
+    console.log(mensagem);
+  });
 
-Ajuste a função **mensagemOla** para que receba um parâmetro **nome** e retorne a mensagem **"Olá, [nome]!"**.
-
-> Exemplo:
-
-    mensagemOla("Mariana");
-    // "Olá, Mariana!"
-
-Ao final, devemos ter uma função que monta uma mensagem de olá customizada com o nome informado por parâmetro.
-
-> Dica:
-> https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-
-___
-Extra: Caso queira, podes experimentar criar um **campo de texto**, um **botão** e um **parágrafo** em **index.html** e fazer com que a função de nome seja executada ao pressionarmos o botão, que o nome pode seja lido do campo de texto e a mensagem seja exibida no parágrafo.
-
-*/
