@@ -19,23 +19,34 @@ Obs.: Use let e const para declarar variáveis se for necessário.
 Extra: Faça com uma arrow function.
 */
 
-const primeiraSeqNum = [56, 65, 64, -3, 23, 42, -15, 65, 14, 32, 78, 70, 47];
-const segundaSeqNum = [];
-const terceiraSeqNum [1];
-const quartaSeqNum = [1, -1];
-const quintaSeqNum = null ;
-const sextaSeqNum = [-2,-2,-2,-2]; 
-const setimaSeqNum = [20,10, 30];
+console.log('Exercício 01 - Semana 03 - Módulo 01')
 
-function procuraMinMax() {
-    
+function procuraMinMax(numeros) {
+    if (!Array.isArray(numeros) || !numeros.length) {
+        console.log('Não é possível encontrar!');
+        return;
+    } else {
+        let min = numeros[0];
+        let max = numeros[0];
+
+        for (let i = 0; i < numeros.length; i++) {
+            if(numeros[i] < min) {
+                min = numeros[i];
+            }
+            if(numeros[i] > max) {
+                max = numeros[i];
+            }
+        }
+        console.log({ min, max });
+    }
+        
 }
 
-procuraMinMax(primeiraSeqNum);
-procuraMinMax(segundaSeqNum);
-procuraMinMax(terceiraSeqNum);
-procuraMinMax(quartaSeqNum);
-procuraMinMax(quintaSeqNum);
-procuraMinMax(sextaSeqNum);
-procuraMinMax(setimaSeqNum);
+procuraMinMax([56, 65, 64, -3, 23, 42, -15, 65, 14, 32, 78, 70, 47]);
+procuraMinMax([]);
+procuraMinMax([1]);
+procuraMinMax([1, -1]);
+procuraMinMax(null);
+procuraMinMax([-2, -2, -2, -2]);
+procuraMinMax([20, 10, 30]);
 
